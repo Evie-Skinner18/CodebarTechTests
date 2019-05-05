@@ -1,0 +1,11 @@
+/Users/eves/Projects/CodebarTests/Bank/bin/Debug/netcoreapp2.1/Bank.deps.json
+/Users/eves/Projects/CodebarTests/Bank/bin/Debug/netcoreapp2.1/Bank.runtimeconfig.json
+/Users/eves/Projects/CodebarTests/Bank/bin/Debug/netcoreapp2.1/Bank.runtimeconfig.dev.json
+/Users/eves/Projects/CodebarTests/Bank/bin/Debug/netcoreapp2.1/Bank.dll
+/Users/eves/Projects/CodebarTests/Bank/bin/Debug/netcoreapp2.1/Bank.pdb
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.csprojAssemblyReference.cache
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.csproj.CoreCompileInputs.cache
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.AssemblyInfoInputs.cache
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.AssemblyInfo.cs
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.dll
+/Users/eves/Projects/CodebarTests/Bank/obj/Debug/netcoreapp2.1/Bank.pdb

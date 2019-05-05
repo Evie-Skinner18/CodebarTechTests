@@ -689,11 +689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eves/Projects/FizzBuzz/FizzBuzz/FizzBuzz.csproj",
+      "projectUniqueName": "/Users/eves/Projects/CodebarTests/FizzBuzz/FizzBuzz.csproj",
       "projectName": "FizzBuzz",
-      "projectPath": "/Users/eves/Projects/FizzBuzz/FizzBuzz/FizzBuzz.csproj",
+      "projectPath": "/Users/eves/Projects/CodebarTests/FizzBuzz/FizzBuzz.csproj",
       "packagesPath": "/Users/eves/.nuget/packages/",
-      "outputPath": "/Users/eves/Projects/FizzBuzz/FizzBuzz/obj",
+      "outputPath": "/Users/eves/Projects/CodebarTests/FizzBuzz/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
