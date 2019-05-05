@@ -8,7 +8,7 @@ namespace Bank
     {
         private readonly string _option;
         public int Balance;
-        public List<string> Transactions;
+        public List<Transaction> Transactions;
 
 
         public BankAccount(string option) => _option = option;
@@ -16,8 +16,17 @@ namespace Bank
 
         public string DepositFunds(int funds)
         {
-            //Transactions.Add
-            return (Balance += funds).ToString();
+            Transactions.Add(new Transaction()
+            {
+                TransactionDate = DateTime.Now,
+                TransactionType = "Deposit",
+                Amount = funds,
+                BalanceAfterTransaction = Balance += funds
+            }
+            );
+
+            return $"Deposit of {funds} made at {DateTime.Now} has been added to your account and will appear " +
+            	"on your statement.";
         }
 
         public string WithdrawFunds(int withdrawalAmount)
