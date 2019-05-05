@@ -7,14 +7,28 @@ namespace Bank
     public class BankAccount
     {
         private readonly string _option;
-        public int Balance;
+        public double Balance;
         public List<Transaction> Transactions;
 
 
         public BankAccount(string option) => _option = option;
 
+        public void HandleUserOption()
+        {
+            if (_option == "1")
+            {
+                Console.WriteLine("Please enter the amount you want to deposit");
+                DepositFunds(double.Parse(Console.ReadLine()));
+            }
 
-        public string DepositFunds(int funds)
+            else if (_option == "2")
+            {
+                Console.WriteLine("Please enter the amount you want to withdraw");
+                WithdrawFunds(double.Parse(Console.ReadLine()));
+            }
+        }
+
+        public string DepositFunds(double funds)
         {
             Transactions.Add(new Transaction()
             {
@@ -31,7 +45,7 @@ namespace Bank
         }
 
 
-        public string WithdrawFunds(int withdrawalAmount)
+        public string WithdrawFunds(double withdrawalAmount)
         {
             if (withdrawalAmount > Balance)
             {

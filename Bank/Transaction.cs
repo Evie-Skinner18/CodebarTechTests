@@ -5,13 +5,13 @@ namespace Bank
     {
         public int TransactionId { get; set; }
 
-        public int Amount { get; set; }
+        public double Amount { get; set; }
 
         public DateTime TransactionDate { get; set; }
 
         public string TransactionType { get; set; }
 
-        public int BalanceAfterTransaction { get; set; }
+        public double BalanceAfterTransaction { get; set; }
 
     }
 }
