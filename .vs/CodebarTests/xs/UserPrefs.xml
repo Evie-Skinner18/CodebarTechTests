@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{A3C5918A-4B10-4DD0-B254-620413EF1813}|Default">
   <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bank/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bank/Transaction.cs">
     <Files>
       <File FileName="Bank/Program.cs" Line="10" Column="86" />
-      <File FileName="Bank/Bank.cs" Line="1" Column="1" />
-      <File FileName="Bank/StatementGenerator.cs" Line="1" Column="1" />
+      <File FileName="Bank/BankAccount.cs" Line="19" Column="15" />
+      <File FileName="Bank/StatementGenerator.cs" Line="9" Column="13" />
+      <File FileName="Bank/Transaction.cs" Line="7" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Bank PreferredExecutionTarget="MonoDevelop.Default" />

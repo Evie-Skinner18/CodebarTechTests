@@ -16,12 +16,16 @@ namespace Bank
 
         public string DepositFunds(int funds)
         {
+            //Transactions.Add
             return (Balance += funds).ToString();
         }
 
         public string WithdrawFunds(int withdrawalAmount)
         {
-            return withdrawalAmount > Balance ? "Withdrawal blocked! You don't have enough money soz."
+            return withdrawalAmount > Balance ? 
+                "Withdrawal blocked! You don't have enough money soz." 
+                    : 
+                (Balance -= withdrawalAmount).ToString();
         }
 
     }

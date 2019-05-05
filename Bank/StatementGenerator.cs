@@ -1,10 +1,12 @@
 ﻿using System;
 namespace Bank
 {
-    public class StatementGenerator
+    public static class StatementGenerator
     {
-        public StatementGenerator()
+      // _bankAccount
+        public static string GenerateBankStatement(BankAccount account)
         {
+
         }
     }
 }
