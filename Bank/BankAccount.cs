@@ -18,6 +18,7 @@ namespace Bank
         {
             Transactions.Add(new Transaction()
             {
+                TransactionId = Transactions.Count(),
                 TransactionDate = DateTime.Now,
                 TransactionType = "Deposit",
                 Amount = funds,
@@ -29,6 +30,7 @@ namespace Bank
             	"on your statement.";
         }
 
+
         public string WithdrawFunds(int withdrawalAmount)
         {
             if (withdrawalAmount > Balance)
@@ -38,6 +40,7 @@ namespace Bank
 
             Transactions.Add(new Transaction()
             {
+                TransactionId = Transactions.Count(),
                 TransactionDate = DateTime.Now,
                 TransactionType = "Withdrawal",
                 Amount = withdrawalAmount,
@@ -47,11 +50,6 @@ namespace Bank
 
             return $"Withdrawal of {withdrawalAmount} made at {DateTime.Now} has been deducted from your account " +
             	"and will appear on your statement.";
-
-            //return withdrawalAmount > Balance ? 
-            //"Withdrawal blocked! You don't have enough money soz." 
-            //    : 
-            //(Balance -= withdrawalAmount).ToString();
         }
 
     }
