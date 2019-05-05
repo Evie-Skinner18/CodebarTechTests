@@ -6,28 +6,28 @@ namespace Bank
 {
     public class BankAccount
     {
-        private readonly string _option;
+        //private readonly string _option;
         public double Balance;
-        public List<Transaction> Transactions;
+        public List<Transaction> Transactions = new List<Transaction>();
 
 
-        public BankAccount(string option) => _option = option;
+        //public BankAccount(string option) => _option = option;
 
 
         public string DepositFunds(double funds)
         {
-            Transactions.Add(new Transaction()
+            var transaction = new Transaction
             {
-                TransactionId = Transactions.Count(),
                 TransactionDate = DateTime.Now,
                 TransactionType = "Deposit",
                 Amount = funds,
                 BalanceAfterTransaction = Balance += funds
-            }
-            );
+            };
+
+            Transactions.Add(transaction);
 
             return $"Deposit of {funds} made at {DateTime.Now} has been added to your account and will appear " +
-            	"on your statement.";
+                "on your statement.";
         }
 
 
@@ -38,9 +38,8 @@ namespace Bank
                 return "Withdrawal blocked! You don't have enough money soz.";
             }
 
-            Transactions.Add(new Transaction()
+            Transactions.Add(new Transaction
             {
-                TransactionId = Transactions.Count(),
                 TransactionDate = DateTime.Now,
                 TransactionType = "Withdrawal",
                 Amount = withdrawalAmount,
@@ -49,7 +48,7 @@ namespace Bank
             );
 
             return $"Withdrawal of {withdrawalAmount} made at {DateTime.Now} has been deducted from your account " +
-            	"and will appear on your statement.";
+                "and will appear on your statement.";
         }
 
     }
