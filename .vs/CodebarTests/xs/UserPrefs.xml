@@ -1,12 +1,13 @@
-﻿<Properties StartupConfiguration="{34473674-25D5-41AB-9DDD-C0955DF8A198}|Default">
-  <MonoDevelop.Ide.ItemProperties.FizzBuzz FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FizzBuzz/FizzBuzzer.cs">
+﻿<Properties StartupConfiguration="{A3C5918A-4B10-4DD0-B254-620413EF1813}|Default">
+  <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bank/Program.cs">
     <Files>
-      <File FileName="FizzBuzz/Program.cs" Line="9" Column="37" />
-      <File FileName="FizzBuzz/FizzBuzzer.cs" Line="1" Column="1" />
+      <File FileName="Bank/Program.cs" Line="10" Column="86" />
+      <File FileName="Bank/Bank.cs" Line="1" Column="1" />
+      <File FileName="Bank/StatementGenerator.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Bank FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Bank PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
