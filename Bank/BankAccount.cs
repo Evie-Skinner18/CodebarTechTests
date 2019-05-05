@@ -13,20 +13,6 @@ namespace Bank
 
         public BankAccount(string option) => _option = option;
 
-        public void HandleUserOption()
-        {
-            if (_option == "1")
-            {
-                Console.WriteLine("Please enter the amount you want to deposit");
-                DepositFunds(double.Parse(Console.ReadLine()));
-            }
-
-            else if (_option == "2")
-            {
-                Console.WriteLine("Please enter the amount you want to withdraw");
-                WithdrawFunds(double.Parse(Console.ReadLine()));
-            }
-        }
 
         public string DepositFunds(double funds)
         {

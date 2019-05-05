@@ -6,9 +6,13 @@ namespace Bank
     {
         static void Main(string[] args)
         {
+            var bankAccount = new BankAccount();
             Console.WriteLine("Welcome to Gringotts Bank! Type the number of one of the following options to continue...");
             Console.WriteLine("1: Deposit \n 2: Withrawal \n 3: Print account statement");
         }
+
+        //
+
     }
 }
 
