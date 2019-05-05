@@ -3,7 +3,7 @@ namespace Bank
 {
     public class Transaction
     {
-        public int TransactionId = new Random().Next(0, 1000);
+        public int TransactionId { get; set;}
 
         public double Amount { get; set; }
 

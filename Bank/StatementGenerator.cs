@@ -19,8 +19,8 @@ namespace Bank
             {
                 Console.WriteLine(
                     $"Transaction: {t.TransactionId} \n Date: {t.TransactionDate} \n " +
-                    $"Type: {t.TransactionType} \n Amount: {t.Amount} \n " +
-                    $"Balance after this transaction: {t.BalanceAfterTransaction}");
+                    $"Type: {t.TransactionType} \n Amount: £{t.Amount} \n " +
+                    $"Balance after this transaction: £{t.BalanceAfterTransaction}");
             }
         }
     }
