@@ -20,22 +20,22 @@ namespace CodebarTests
             {
                 if (i % 3 == 0 && i % 5 == 0)
                 {
-                    return "Fizz Buzz";
+                    Console.WriteLine("Fizz Buzz");
                 }
 
                 if (i % 3 == 0)
                 {
-                    return "Fizz";
+                    Console.WriteLine("Fizz");
                 }
 
                 if (i % 5 == 0)
                 {
-                    return "Buzz";
+                    Console.WriteLine("Buzz");
                 }
 
-                return i.ToString();
+                Console.WriteLine(i);
             }
-            return _message;
+            Console.WriteLine(_message);
         }
 
     }
