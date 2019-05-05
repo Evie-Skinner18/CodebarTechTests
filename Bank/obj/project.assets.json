@@ -689,11 +689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eves/Projects/FizzBuzz/Bank/Bank.csproj",
+      "projectUniqueName": "/Users/eves/Projects/CodebarTests/Bank/Bank.csproj",
       "projectName": "Bank",
-      "projectPath": "/Users/eves/Projects/FizzBuzz/Bank/Bank.csproj",
+      "projectPath": "/Users/eves/Projects/CodebarTests/Bank/Bank.csproj",
       "packagesPath": "/Users/eves/.nuget/packages/",
-      "outputPath": "/Users/eves/Projects/FizzBuzz/Bank/obj",
+      "outputPath": "/Users/eves/Projects/CodebarTests/Bank/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
