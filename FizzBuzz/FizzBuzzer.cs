@@ -24,8 +24,6 @@ namespace CodebarTests
 
                 else Console.WriteLine(i);
             }
-
         }
-
     }
 }
