@@ -31,10 +31,27 @@ namespace Bank
 
         public string WithdrawFunds(int withdrawalAmount)
         {
-            return withdrawalAmount > Balance ? 
-                "Withdrawal blocked! You don't have enough money soz." 
-                    : 
-                (Balance -= withdrawalAmount).ToString();
+            if (withdrawalAmount > Balance)
+            {
+                return "Withdrawal blocked! You don't have enough money soz.";
+            }
+
+            Transactions.Add(new Transaction()
+            {
+                TransactionDate = DateTime.Now,
+                TransactionType = "Withdrawal",
+                Amount = withdrawalAmount,
+                BalanceAfterTransaction = Balance -= withdrawalAmount
+            }
+            );
+
+            return $"Withdrawal of {withdrawalAmount} made at {DateTime.Now} has been deducted from your account " +
+            	"and will appear on your statement.";
+
+            //return withdrawalAmount > Balance ? 
+            //"Withdrawal blocked! You don't have enough money soz." 
+            //    : 
+            //(Balance -= withdrawalAmount).ToString();
         }
 
     }

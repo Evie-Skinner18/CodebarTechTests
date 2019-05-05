@@ -3,6 +3,7 @@ namespace Bank
 {
     public class Transaction
     {
+        public int TransactionId { get; set; }
 
         public int Amount { get; set; }
 
@@ -11,7 +12,6 @@ namespace Bank
         public string TransactionType { get; set; }
 
         public int BalanceAfterTransaction { get; set; }
-
 
     }
 }
