@@ -27,7 +27,7 @@ namespace Bank
             Transactions.Add(transaction);
 
             return $"Deposit of {funds} made at {DateTime.Now} has been added to your account and will appear " +
-                "on your statement.";
+                $"on your statement. \n Your balance is now {Balance}";
         }
 
 
@@ -48,7 +48,7 @@ namespace Bank
             );
 
             return $"Withdrawal of {withdrawalAmount} made at {DateTime.Now} has been deducted from your account " +
-                "and will appear on your statement.";
+               $"and will appear on your statement. \n Your balance is now {Balance}";
         }
 
     }

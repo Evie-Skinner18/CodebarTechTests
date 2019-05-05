@@ -13,7 +13,7 @@ namespace Bank
 
             var userOption = Console.ReadLine();
 
-            while (userOption != "exit".ToUpper())
+            while (userOption != "exit")
             {
                 switch (userOption)
                 {
@@ -27,7 +27,7 @@ namespace Bank
 
                     case "2":
                         Console.WriteLine("Enter the amount you want to withdraw");
-                        bankAccount.WithdrawFunds(double.Parse(Console.ReadLine()));
+                        Console.WriteLine(bankAccount.WithdrawFunds(double.Parse(Console.ReadLine())));
                         Console.WriteLine("1: Deposit \n 2: Withrawal \n 3: Print account statement. Type exit at " +
                         "any time to leave the bank.");
                         userOption = Console.ReadLine();
