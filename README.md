@@ -15,5 +15,8 @@ My preparation for coaching at the Codebar workshop, and continuous improvement 
 
 # _JavaScript_
 ## Fizz Buzz
+* I found this challenge harder in JavaScript, but not too hard.
+* I enjoyed learning about Node and how I could apply it to the challenge
+* I am blocked trying to make the app into an interactive command line programme that uses Node to take user input.
 
 ## Noughts and Crosses
