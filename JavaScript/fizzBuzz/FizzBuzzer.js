@@ -7,10 +7,22 @@ class FizzBuzzer {
 
 
     // method
-     fizzBuzz(numLimit) {
-        
+     fizzBuzz(numLimit) {  
+
         for(i = 0; i < numLimit.length; i++) {
-            
+
+            if(numLimit[i] % 3 == 0){
+                console.log('Fizz');
+
+                if(numLimit[i] % 5 == 0){
+                    console.log('Fizz Buzz');
+                }
+            }
+            else if(numLimit[i] % 5 == 0 ){
+                console.log('Buzz');
+            }
         }
     }
-}
+};
+
+export default FizzBuzzer;
