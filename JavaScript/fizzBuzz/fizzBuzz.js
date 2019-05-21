@@ -1,12 +1,23 @@
-// Write a short program that prints each number from 1 to 100 on a new line.
+// JS equivalent of using statements
+const FizzBuzzer = require('./FizzBuzzer.js');
+const readline = require('readline');
 
-// For each multiple of 3, print "Fizz" instead of the number.
-// For each multiple of 5, print "Buzz" instead of the number.
-// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
-// For all other numbers, print the number itself.
 
 console.log('fizzBuzz is running');
-const FizzBuzzer = require('./FizzBuzzer.js');
 
-let fizzBuzzer = new FizzBuzzer(16);
-fizzBuzzer.fizzBuzz();
+// in node you have to istantiate a readline object in order to take user input
+let lineReader = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+lineReader.question(('Welcome to the Fizz Buzzer! Enter a number and I will tell you if it is a Fizz, a Buzz,' +
+' or a Fizz Buzz.', (answer) => {
+    let userNumber = parseInt(answer);
+    let fizzBuzzer = new FizzBuzzer(userNumber);
+    fizzBuzzer.fizzBuzz();
+
+    lineReader.close();
+}))
+
+
