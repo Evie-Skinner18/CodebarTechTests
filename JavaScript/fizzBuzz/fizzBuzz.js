@@ -8,5 +8,5 @@
 console.log('fizzBuzz is running');
 const FizzBuzzer = require('./FizzBuzzer.js');
 
-let fizzBuzzer = new FizzBuzzer(10);
+let fizzBuzzer = new FizzBuzzer(16);
 fizzBuzzer.fizzBuzz();

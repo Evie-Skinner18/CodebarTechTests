@@ -14,7 +14,7 @@ class FizzBuzzer {
 
         for(i ; i < this.numLimit; i++) {
 
-            if(i % 5 == 0 && this.numLimit % 3 == 0){
+            if(i % 5 == 0 && i % 3 == 0){
                 //result = 'Fizz Buzz';
                 console.log('Fizz Buzz');
             }
