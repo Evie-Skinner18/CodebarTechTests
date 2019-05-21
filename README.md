@@ -1,5 +1,5 @@
 # Demystifying Tech Tests
-My preparation for coaching at the Codebar workshop
+My preparation for coaching at the Codebar workshop, and continuous improvement post-workshop.
 
 # _C#_
 ## Fizz Buzz
