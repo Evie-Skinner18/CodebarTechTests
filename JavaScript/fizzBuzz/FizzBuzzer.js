@@ -14,17 +14,25 @@ class FizzBuzzer {
 
         for(i ; i < this.numLimit; i++) {
 
-            if(this.numLimit[i] % 3 == 0){
-                result = 'Fizz';
+            if(i % 5 == 0 && this.numLimit % 3 == 0){
+                //result = 'Fizz Buzz';
+                console.log('Fizz Buzz');
+            }
 
-                if(this.numLimit[i] % 5 == 0){
-                    result = 'Fizz Buzz';
-                }
+            else if(i % 3 == 0){
+                //result = 'Fizz';
+                console.log('Fizz');                
             }
-            else if(this.numLimit[i] % 5 == 0 ){
-                result = 'Buzz';
+
+            else if(i % 5 == 0 ){
+               // result = 'Buzz';
+               console.log('Buzz');
             }
-            return result;
+
+            else {
+                console.log(i);
+            }
+            //return result;
         }
     }
 };

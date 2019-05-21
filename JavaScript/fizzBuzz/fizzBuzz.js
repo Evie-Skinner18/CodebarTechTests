@@ -5,7 +5,8 @@
 // For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
 // For all other numbers, print the number itself.
 
+console.log('fizzBuzz is running');
 const FizzBuzzer = require('./FizzBuzzer.js');
 
 let fizzBuzzer = new FizzBuzzer(10);
-console.log(fizzBuzzer.fizzBuzz());
+fizzBuzzer.fizzBuzz();
