@@ -9,20 +9,24 @@ class FizzBuzzer {
     // method
      fizzBuzz(numLimit) {  
 
-        for(i = 0; i < numLimit.length; i++) {
+        let result = '';
+        let i = 0;
+
+        for(i ; i < numLimit; i++) {
 
             if(numLimit[i] % 3 == 0){
-                console.log('Fizz');
+                result = 'Fizz';
 
                 if(numLimit[i] % 5 == 0){
-                    console.log('Fizz Buzz');
+                    result = 'Fizz Buzz';
                 }
             }
             else if(numLimit[i] % 5 == 0 ){
-                console.log('Buzz');
+                result = 'Buzz';
             }
+            return result;
         }
     }
 };
 
-export default FizzBuzzer;
+module.exports = FizzBuzzer;
