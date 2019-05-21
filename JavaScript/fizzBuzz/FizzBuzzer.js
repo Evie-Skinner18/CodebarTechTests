@@ -7,21 +7,21 @@ class FizzBuzzer {
 
 
     // method
-     fizzBuzz(numLimit) {  
+     fizzBuzz() {  
 
         let result = '';
         let i = 0;
 
-        for(i ; i < numLimit; i++) {
+        for(i ; i < this.numLimit; i++) {
 
-            if(numLimit[i] % 3 == 0){
+            if(this.numLimit[i] % 3 == 0){
                 result = 'Fizz';
 
-                if(numLimit[i] % 5 == 0){
+                if(this.numLimit[i] % 5 == 0){
                     result = 'Fizz Buzz';
                 }
             }
-            else if(numLimit[i] % 5 == 0 ){
+            else if(this.numLimit[i] % 5 == 0 ){
                 result = 'Buzz';
             }
             return result;
