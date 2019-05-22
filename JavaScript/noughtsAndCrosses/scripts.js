@@ -99,22 +99,19 @@ function takeTurn(boxIndex){
 
 // loop through all the possible combinations to check for three in a row
 function checkForAWinner(playerPiece){
+
+    let hasAllThree = false;
+
     winningCombinations.forEach(combination => {
+       
+        if(combination.forEach(box => {box.innerHTML == playerPiece})) {
+            hasAllThree = true;
+        }     
 
-        combination.forEach(box => {
-            //return box.innerHTML == playerPiece? numberOfPieces++ : numberOfPieces;
-            numberOfPieces = 0;
-            if(box.innerHTML == playerPiece)
-            {
-                numberOfPieces++ ;
-            }
-        });
-    });
+        else hasAllThree;      
+    });  
 
-    //return numberOfPieces == 3? true : false;
-    if(numberOfPieces == 3){
-        return true;
-    }
+    return hasAllThree;  
 }
 
 
