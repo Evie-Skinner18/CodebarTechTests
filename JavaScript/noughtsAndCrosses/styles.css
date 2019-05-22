@@ -1,11 +1,21 @@
-.body {
+.heading {
     color: rebeccapurple;
 }
 
 .box {
-    border: 5px solid dodgerblue;
-    padding: 10%;
-    /* width: 20px;
-    height: 50px; */
+    border: 5px solid orangered;
+    padding: 5%;
+    font-size: 100px;    
     
+}
+
+.nought {
+
+    color: gold;
+    background: dodgerblue;
+}
+
+.cross {
+    color: dodgerblue;
+    background: gold;
 }
