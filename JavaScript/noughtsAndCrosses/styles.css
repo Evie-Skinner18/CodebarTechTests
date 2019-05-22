@@ -10,7 +10,6 @@
 }
 
 .nought {
-
     color: gold;
     background: dodgerblue;
 }
@@ -18,4 +17,14 @@
 .cross {
     color: dodgerblue;
     background: gold;
+}
+
+.nought:hover {
+    color: rgb(180, 154, 3);
+    background: rgb(19, 87, 155);
+}
+
+.cross:hover {
+    color: rgb(19, 87, 155);
+    background: rgb(180, 154, 3);
 }
