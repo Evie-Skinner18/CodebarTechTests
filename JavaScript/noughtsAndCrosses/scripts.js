@@ -12,19 +12,32 @@
 
 // grab the elements you need
 const allBoxes = document.getElementsByClassName('box');
+const h2 = document.querySelector('h2');
 
 let playerOne = true;
 let playerTwo = false;
 
+// function addNought(element){
+    
+// }
+
+// make each box listen out for a click from the user
+for(let i = 0; i < allBoxes.length; i++){
+    allBoxes[i].addEventListener("click", function(event){
+        var userInput = event.target.getAttribute("data-index");
+        console.log(userInput);
+        //takeTurn(userInput);  
+    });
+}
+
 function takeTurn(){
+    // player 1 is noughts
     if(playerOne) {
-        for(let i = 0; i < allBoxes.length; i++)
+        h2.innerHTML = "It's player one's turn!";
+       
     }
 }
 
-// for(var i = 0; i < options.length; i++){
-//     options[i].addEventListener("click", function(event){
-//     var userInput = event.target.getAttribute("data-index");
-//      nextLevel(userInput);
-  
-//    });
+
+//takeTurn();
+
