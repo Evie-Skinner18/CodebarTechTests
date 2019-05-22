@@ -24,17 +24,17 @@ let playerTwo = false;
 // make each box listen out for a click from the user
 for(let i = 0; i < allBoxes.length; i++){
     allBoxes[i].addEventListener("click", function(event){
-        var userInput = event.target.getAttribute("data-index");
+        var userInput = i;
         console.log(userInput);
-        //takeTurn(userInput);  
+        takeTurn(userInput);  
     });
 }
 
-function takeTurn(){
+function takeTurn(boxIndex){
     // player 1 is noughts
     if(playerOne) {
         h2.innerHTML = "It's player one's turn!";
-       
+        allBoxes[boxIndex].innerHTML = 'O';       
     }
 }
 
