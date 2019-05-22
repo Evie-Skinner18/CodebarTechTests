@@ -9,3 +9,8 @@
 // When all 9 squares are full, the game is over. If no player has 3 pieces in a row, the game ends in a tie.
 
 //document.write('Connected!');
+
+var playerOne = true;
+var playerTwo = false;
+
+function

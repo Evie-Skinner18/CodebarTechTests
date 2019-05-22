@@ -1,11 +1,14 @@
 .heading {
     color: rebeccapurple;
+    padding-bottom: 5%;
 }
 
 .box {
     border: 5px solid orangered;
-    padding: 5%;
-    font-size: 100px;    
+    padding: 2%;
+    font-size: 100px; 
+    width: 20%;
+    height: 20%; 
     
 }
 
