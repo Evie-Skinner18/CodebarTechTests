@@ -10,7 +10,12 @@
 
 //document.write('Connected!');
 
+// grab the elements you need
+var allBoxes = document.getElementsByClassName(box);
+
 var playerOne = true;
 var playerTwo = false;
 
-function
+function takeTurn(){
+
+}
