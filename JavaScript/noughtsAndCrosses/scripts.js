@@ -10,49 +10,30 @@
 const allBoxes = document.getElementsByClassName('box');
 const h2 = document.querySelector('h2');
 
-// winning rows
-const row1 = [
-    allBoxes[0],
-    allBoxes[1],
-    allBoxes[2]
+//2D array of all the winning combinations
+const winningCombinations = [
+    // winning rows
+    // 0
+    [ allBoxes[0], allBoxes[1], allBoxes[2] ],
+    // 1
+    [ allBoxes[3], allBoxes[4], allBoxes[5] ],
+    //2
+    [ allBoxes[6], allBoxes[7], allBoxes[8] ],
+    // winning cols
+    // 3
+    [ allBoxes[0], allBoxes[3], allBoxes[6] ],
+    // 4
+    [ allBoxes[1], allBoxes[4], allBoxes[7] ],
+    // 5
+    [ allBoxes[2], allBoxes[5], allBoxes[8] ],
+    // winning diagonals
+    //6
+    [ allBoxes[2], allBoxes[4], allBoxes[6] ],
+    // 7
+    [ allBoxes[0], allBoxes[4], allBoxes[8] ]
+
 ];
-const row2 = [
-    allBoxes[3],
-    allBoxes[4],
-    allBoxes[5]
-];
-const row3 = [
-    allBoxes[6],
-    allBoxes[7],
-    allBoxes[8]
-];
-// winning cols
-const col1 = [
-    allBoxes[0],
-    allBoxes[3],
-    allBoxes[6]
-];
-const col2 = [
-    allBoxes[1],
-    allBoxes[4],
-    allBoxes[7]
-];
-const col3 = [
-    allBoxes[2],
-    allBoxes[5],
-    allBoxes[8]
-];
-// winning diagonals
-const diagonal1 = [
-    allBoxes[2],
-    allBoxes[4],
-    allBoxes[6]
-];
-const diagonal2 = [
-    allBoxes[0],
-    allBoxes[4],
-    allBoxes[8]
-];
+
 
 
 // playerOne is true from the start because we'll start with this one
@@ -60,6 +41,7 @@ let playerOne = true;
 let playerTwo = false;
 let hasWon = false;
 let playerPiece = '';
+let numberOfPieces = 0;
 
 
 let playerOneName = prompt('Welcome to Noughts and Crosses! Player One, please enter your name:');
@@ -115,8 +97,24 @@ function takeTurn(boxIndex){
     }
 }
 
+// loop through all the possible combinations to check for three in a row
 function checkForAWinner(playerPiece){
+    winningCombinations.forEach(combination => {
 
+        combination.forEach(box => {
+            //return box.innerHTML == playerPiece? numberOfPieces++ : numberOfPieces;
+            numberOfPieces = 0;
+            if(box.innerHTML == playerPiece)
+            {
+                numberOfPieces++ ;
+            }
+        });
+    });
+
+    //return numberOfPieces == 3? true : false;
+    if(numberOfPieces == 3){
+        return true;
+    }
 }
 
 
