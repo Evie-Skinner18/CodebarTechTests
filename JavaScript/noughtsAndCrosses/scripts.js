@@ -8,20 +8,17 @@
 // The first player to get 3 of their pieces in a row (up, down, across or diagonally) wins.
 // When all 9 squares are full, the game is over. If no player has 3 pieces in a row, the game ends in a tie.
 
-//document.write('Connected!');
 
 // grab the elements you need
 const allBoxes = document.getElementsByClassName('box');
 const h2 = document.querySelector('h2');
 
+// playerOne is true from the start because we'll start with this one
 let playerOne = true;
 let playerTwo = false;
 
-// function addNought(element){
-    
-// }
 
-// make each box listen out for a click from the user
+// make each box listen out for a click from the user and store the index of the box they've clicked in a var
 for(let i = 0; i < allBoxes.length; i++){
     allBoxes[i].addEventListener("click", function(event){
         var userInput = i;
@@ -30,11 +27,22 @@ for(let i = 0; i < allBoxes.length; i++){
     });
 }
 
+// this will get called using the index of the box the user has clicked
 function takeTurn(boxIndex){
     // player 1 is noughts
     if(playerOne) {
         h2.innerHTML = "It's player one's turn!";
-        allBoxes[boxIndex].innerHTML = 'O';       
+        allBoxes[boxIndex].innerHTML = 'O';
+
+        playerOne = false;
+        playerTwo = true;       
+    }
+    else {
+        h2.innerHTML = "It's player two's turn!";
+        allBoxes[boxIndex].innerHTML = 'X';
+
+        playerOne = true;
+        playerTwo = false;    
     }
 }
 
