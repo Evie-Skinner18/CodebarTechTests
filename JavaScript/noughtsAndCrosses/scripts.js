@@ -36,16 +36,24 @@ for(let i = 0; i < allBoxes.length; i++){
 // this will get called using the index of the box the user has clicked
 function takeTurn(boxIndex){
     // player 1 is noughts
-    if(playerOne) {
+    if(allBoxes[boxIndex].innerHTML == 'O' || allBoxes[boxIndex].innerHTML == 'X') {
+
+        h2.innerHTML = `Sorry babber, someone's already put a ${allBoxes[boxIndex].innerHTML} there.`;
+
+    }
+    else if(playerOne) {
+        
         allBoxes[boxIndex].innerHTML = 'O';
 
         playerOne = false;
         playerTwo = true; 
         h2.innerHTML = `It's ${playerTwoName}'s turn!`;      
+
     }
     else {
-        allBoxes[boxIndex].innerHTML = 'X';
 
+        allBoxes[boxIndex].innerHTML = 'X';
+        
         playerOne = true;
         playerTwo = false;   
         h2.innerHTML = `It's ${playerOneName}'s turn!`;
