@@ -11,11 +11,20 @@
 //document.write('Connected!');
 
 // grab the elements you need
-var allBoxes = document.getElementsByClassName(box);
+const allBoxes = document.getElementsByClassName('box');
 
-var playerOne = true;
-var playerTwo = false;
+let playerOne = true;
+let playerTwo = false;
 
 function takeTurn(){
-
+    if(playerOne) {
+        for(let i = 0; i < allBoxes.length; i++)
+    }
 }
+
+// for(var i = 0; i < options.length; i++){
+//     options[i].addEventListener("click", function(event){
+//     var userInput = event.target.getAttribute("data-index");
+//      nextLevel(userInput);
+  
+//    });
