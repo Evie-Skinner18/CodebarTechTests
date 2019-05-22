@@ -17,6 +17,12 @@ const h2 = document.querySelector('h2');
 let playerOne = true;
 let playerTwo = false;
 
+let playerOneName = prompt('Welcome to Noughts and Crosses! Player One, please enter your name:');
+let playerTwoName = prompt('Player Two, please enter your name:');
+
+// template literals bookended with backticks
+h2.innerHTML = `Let the games begin! ${playerOneName}, GO`;
+
 
 // make each box listen out for a click from the user and store the index of the box they've clicked in a var
 for(let i = 0; i < allBoxes.length; i++){
@@ -31,18 +37,18 @@ for(let i = 0; i < allBoxes.length; i++){
 function takeTurn(boxIndex){
     // player 1 is noughts
     if(playerOne) {
-        h2.innerHTML = "It's player one's turn!";
         allBoxes[boxIndex].innerHTML = 'O';
 
         playerOne = false;
-        playerTwo = true;       
+        playerTwo = true; 
+        h2.innerHTML = `It's ${playerTwoName}'s turn!`;      
     }
     else {
-        h2.innerHTML = "It's player two's turn!";
         allBoxes[boxIndex].innerHTML = 'X';
 
         playerOne = true;
-        playerTwo = false;    
+        playerTwo = false;   
+        h2.innerHTML = `It's ${playerOneName}'s turn!`;
     }
 }
 
