@@ -73,13 +73,21 @@ function takeTurn(boxIndex){
 
         playerOne = false;
         playerTwo = true; 
-        hasWon = checkForAWinner('O');
-        if(hasWon) {
-            allBoxes[boxIndex].removeEventListener("click");
-            return h2.innerHTML = `${playerOneName} is the winner! Well done ${playerOneName}.`;
+
+        if(boardIsFull()) {
+            return h2.innerHTML = `Ooh... It's a draw!`;             
         }
 
-        h2.innerHTML = `It's ${playerTwoName}'s turn!`;    
+        else  {
+            hasWon = checkForAWinner('O');
+            if(hasWon) {
+                allBoxes[boxIndex].removeEventListener("click");
+                return h2.innerHTML = `${playerOneName} is the winner! Well done ${playerOneName}.`;
+            }
+
+            h2.innerHTML = `It's ${playerTwoName}'s turn!`;
+        }
+           
     }
     // player two is crosses
     else {
@@ -87,14 +95,21 @@ function takeTurn(boxIndex){
         allBoxes[boxIndex].innerHTML = 'X';
         
         playerOne = true;
-        playerTwo = false;   
-        hasWon = checkForAWinner('X');
-        if(hasWon) {
-            allBoxes[boxIndex].removeEventListener("click");
-            return h2.innerHTML = `${playerTwoName} is the winner! Well done ${playerTwoName}.`;    
+        playerTwo = false;
+        
+        if(boardIsFull()) {
+            return h2.innerHTML = `Ooh... It's a draw!`;           
         }
+        
+        else {
+            hasWon = checkForAWinner('X');
+            if(hasWon) {
+                allBoxes[boxIndex].removeEventListener("click");
+                return h2.innerHTML = `${playerTwoName} is the winner! Well done ${playerTwoName}.`;    
+            }
 
-        h2.innerHTML = `It's ${playerOneName}'s turn!`;
+            h2.innerHTML = `It's ${playerOneName}'s turn!`;            
+        }    
     }
 }
 
@@ -119,13 +134,14 @@ function checkForAWinner(playerPiece){
     return numberOfPieces == 3? true : false;  
 }
 
-function checkForFullBoard(){
+function boardIsFull(){
     let numberOfEmptyBoxes = 0;
 
     for (let i = 0; i < allBoxes.length; i++) {
-        const element = arr];
-        
+        numberOfEmptyBoxes = allBoxes[i].innerHTML == "" ? numberOfEmptyBoxes ++ : numberOfEmptyBoxes;        
     }
+
+    return numberOfEmptyBoxes == 0 ? true : false;
 }
 
 
