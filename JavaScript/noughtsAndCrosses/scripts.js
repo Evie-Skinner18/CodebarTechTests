@@ -1,7 +1,6 @@
 
 
 
-// Players alternate to place Xs and Os on the grid until either wins.
 // The first player to get 3 of their pieces in a row (up, down, across or diagonally) wins.
 // When all 9 squares are full, the game is over. If no player has 3 pieces in a row, the game ends in a tie.
 
@@ -76,7 +75,8 @@ function takeTurn(boxIndex){
         playerTwo = true; 
         hasWon = checkForAWinner('O');
         if(hasWon) {
-            h2.innerHTML = `${playerOneName} is the winner! Well done ${playerOneName}.`;    
+            allBoxes[boxIndex].removeEventListener("click");
+            return h2.innerHTML = `${playerOneName} is the winner! Well done ${playerOneName}.`;
         }
 
         h2.innerHTML = `It's ${playerTwoName}'s turn!`;    
@@ -90,7 +90,8 @@ function takeTurn(boxIndex){
         playerTwo = false;   
         hasWon = checkForAWinner('X');
         if(hasWon) {
-            h2.innerHTML = `${playerTwoName} is the winner! Well done ${playerTwoName}.`;    
+            allBoxes[boxIndex].removeEventListener("click");
+            return h2.innerHTML = `${playerTwoName} is the winner! Well done ${playerTwoName}.`;    
         }
 
         h2.innerHTML = `It's ${playerOneName}'s turn!`;
@@ -100,18 +101,31 @@ function takeTurn(boxIndex){
 // loop through all the possible combinations to check for three in a row
 function checkForAWinner(playerPiece){
 
-    let hasAllThree = false;
-
     winningCombinations.forEach(combination => {
-       
-        if(combination.forEach(box => {box.innerHTML == playerPiece})) {
-            hasAllThree = true;
-        }     
+        // is there any way of simplifying this? When num of pieces == 3, it currently returns
+        // true 8 times because 8 combinations
+        if(numberOfPieces == 3) {
+            return true;
+        }
 
-        else hasAllThree;      
+       numberOfPieces = 0;
+       for(let i = 0; i < combination.length; i++) {
+           if(combination[i].innerHTML == playerPiece) {
+               numberOfPieces++ ;               
+           }
+       }              
     });  
 
-    return hasAllThree;  
+    return numberOfPieces == 3? true : false;  
+}
+
+function checkForFullBoard(){
+    let numberOfEmptyBoxes = 0;
+
+    for (let i = 0; i < allBoxes.length; i++) {
+        const element = arr];
+        
+    }
 }
 
 
