@@ -1,7 +1,6 @@
 
 
 
-// The first player to get 3 of their pieces in a row (up, down, across or diagonally) wins.
 // When all 9 squares are full, the game is over. If no player has 3 pieces in a row, the game ends in a tie.
 
 
@@ -81,7 +80,11 @@ function takeTurn(boxIndex){
         else  {
             hasWon = checkForAWinner('O');
             if(hasWon) {
-                allBoxes[boxIndex].removeEventListener("click");
+                allBoxes[boxIndex].removeEventListener("click", function(){
+                    var userInput = i;
+                    console.log(userInput);
+                    takeTurn(userInput);  
+                });
                 return h2.innerHTML = `${playerOneName} is the winner! Well done ${playerOneName}.`;
             }
 
@@ -104,7 +107,11 @@ function takeTurn(boxIndex){
         else {
             hasWon = checkForAWinner('X');
             if(hasWon) {
-                allBoxes[boxIndex].removeEventListener("click");
+                allBoxes[boxIndex].removeEventListener("click", function(){
+                    var userInput = i;
+                    console.log(userInput);
+                    takeTurn(userInput);  
+                });
                 return h2.innerHTML = `${playerTwoName} is the winner! Well done ${playerTwoName}.`;    
             }
 
@@ -135,13 +142,18 @@ function checkForAWinner(playerPiece){
 }
 
 function boardIsFull(){
-    let numberOfEmptyBoxes = 0;
+    let numberOfFullBoxes = 0;
 
     for (let i = 0; i < allBoxes.length; i++) {
-        numberOfEmptyBoxes = allBoxes[i].innerHTML == "" ? numberOfEmptyBoxes ++ : numberOfEmptyBoxes;        
+        // numberOfFullBoxes = (allBoxes[i].innerHTML ==
+        // 'O' || allBoxes[i].innerHTML == 'X' ? numberOfFullBoxes ++ : numberOfFullBoxes);
+        
+        if(allBoxes[i].innerHTML.includes('X') || allBoxes[i].innerHTML.includes('O')) {
+            numberOfFullBoxes ++ ;
+        }
     }
 
-    return numberOfEmptyBoxes == 0 ? true : false;
+    return numberOfFullBoxes == 9 ? true : false;
 }
 
 
