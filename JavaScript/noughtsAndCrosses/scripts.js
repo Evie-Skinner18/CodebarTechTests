@@ -145,9 +145,6 @@ function boardIsFull(){
     let numberOfFullBoxes = 0;
 
     for (let i = 0; i < allBoxes.length; i++) {
-        // numberOfFullBoxes = (allBoxes[i].innerHTML ==
-        // 'O' || allBoxes[i].innerHTML == 'X' ? numberOfFullBoxes ++ : numberOfFullBoxes);
-        
         if(allBoxes[i].innerHTML.includes('X') || allBoxes[i].innerHTML.includes('O')) {
             numberOfFullBoxes ++ ;
         }
