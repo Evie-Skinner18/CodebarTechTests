@@ -20,3 +20,10 @@ My preparation for coaching at the Codebar workshop, and continuous improvement 
 * I am blocked trying to make the app into an interactive command line programme that uses Node to take user input.
 
 ## Noughts and Crosses
+* This challenge was harder than Fizz Buzz, but not unsurmountably hard.
+* I enjoyed taking some logic that I had used a year ago to create DATE NIGHT, and improving it whilst tweaking it to fit the purposes of this test.
+* I enjoyed overcoming this challenge, because a year ago I remember attempting this at Sparta and struggling a great deal
+* I found it easy to make the game visually pleasing and interactive for the user
+* The hardest part was writing a function to check for a winner
+* I would like to learn how to make my code here object orientated, as it looks completely different to my solutions to the other tests.
+* There is a bug with the checkForWinner() function that I have highlighted in an Issue. 

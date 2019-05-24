@@ -78,8 +78,8 @@ function takeTurn(boxIndex){
         }
 
         else  {
-            hasWon = checkForAWinner('O');
-            if(hasWon) {
+            //hasWon = checkForAWinner('O');
+            if(checkForAWinner('O')) {
                 allBoxes[boxIndex].removeEventListener("click", function(){
                     var userInput = i;
                     console.log(userInput);
@@ -105,8 +105,8 @@ function takeTurn(boxIndex){
         }
         
         else {
-            hasWon = checkForAWinner('X');
-            if(hasWon) {
+            //hasWon = checkForAWinner('X');
+            if(checkForAWinner('X')) {
                 allBoxes[boxIndex].removeEventListener("click", function(){
                     var userInput = i;
                     console.log(userInput);
