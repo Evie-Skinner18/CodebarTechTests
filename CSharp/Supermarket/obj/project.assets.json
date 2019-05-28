@@ -552,7 +552,6 @@
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
-        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -688,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Bank\\Bank.csproj",
-      "projectName": "Bank",
-      "projectPath": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Bank\\Bank.csproj",
+      "projectUniqueName": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Supermarket\\Supermarket.csproj",
+      "projectName": "Supermarket",
+      "projectPath": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Supermarket\\Supermarket.csproj",
       "packagesPath": "C:\\Users\\BIO359\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Bank\\obj\\",
+      "outputPath": "C:\\Users\\BIO359\\source\\repos\\CodebarTechTests\\CSharp\\Supermarket\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
