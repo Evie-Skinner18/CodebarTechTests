@@ -6,13 +6,13 @@ namespace Supermarket
 {
     public abstract class Product
     {
-        private double _price;
-        private string _name;
+        public double Price;
+        public string Name;
 
         public Product(string name, double price)
         {
-            _price = price;
-            _name = name;
+            Price = price;
+            Name = name;
         }
     }
 }
