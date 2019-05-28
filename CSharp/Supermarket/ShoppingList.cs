@@ -1,12 +1,20 @@
-﻿namespace Supermarket
+﻿using System.Collections.Generic;
+
+namespace Supermarket
 {
     public class ShoppingList
     {
-        private PunnetOfStrawberries _strawberryPunnet;
+        private List<PunnetOfStrawberries> _strawberryPunnets;
+        private List<BagOfCoffee> _coffeeBags;
+        private List<BoxOfTea> _teaBoxes;
 
-        public ShoppingList(PunnetOfStrawberries strawberries)
+        public ShoppingList(List<PunnetOfStrawberries> strawberries, List<BagOfCoffee> coffee, List<BoxOfTea> tea)
         {
-            _strawberryPunnet = strawberries;
+            _strawberryPunnets = strawberries;
+            _coffeeBags = coffee;
+            _teaBoxes = tea;
         }
+
+        
     }
 }
