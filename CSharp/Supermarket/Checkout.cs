@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Supermarket
 {
@@ -6,12 +7,12 @@ namespace Supermarket
     {
         private List<Product> _shoppingtrolley;
 
-        private string _offer;
-        //private double Total;
+        // multiple offer codes can be applied
+        private List<string> _specialOffers;
 
-        public Checkout(string offer)
+        public Checkout(List<string> offerCodes)
         {
-            _offer = offer;
+            _specialOffers = offerCodes;
         }
 
         public void ScanItem(Product item)
@@ -34,6 +35,16 @@ namespace Supermarket
             }
 
             return total;
+        }
+
+        public void ApplySpecialOffer()
+        {
+            // if tea rule has been invoked at the checkout, they get BOGOF on tea
+            if (_specialOffers.Contains("TEA") && _shoppingtrolley.Where(i => i.Name.Contains("tea")).Count() > 1)
+            {
+                // for every two boxes of tea, they get one of those free
+                return _shoppingtrolley.Where(i => i.Name.Contains("tea")).Count()
+            }
         }
 
        
