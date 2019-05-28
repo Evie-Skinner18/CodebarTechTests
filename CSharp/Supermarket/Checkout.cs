@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Supermarket
@@ -56,6 +57,11 @@ namespace Supermarket
                  * 7 = 3 will be free  7/ 2 = 3.5. -0.5 = 3
                  * 9 = four will be free 9 / 2 = 4.5. -0.5 = 4
                  */
+
+                for (int i = 0; i < (numberOfFreeBoxes ++); i++)
+                {
+                    boxesOfTea.Select(b => b.Price - b.Price);
+                }
 
             }
         }
