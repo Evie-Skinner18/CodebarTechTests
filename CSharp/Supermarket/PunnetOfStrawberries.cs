@@ -2,9 +2,11 @@
 {
     public class PunnetOfStrawberries : Product
     {
-        public PunnetOfStrawberries()
+        public override double Price { get; set; }
+
+        public PunnetOfStrawberries(double price)
         {
-            
+            Price = price;
         }
     }
 }

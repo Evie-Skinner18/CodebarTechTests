@@ -6,5 +6,6 @@ namespace Supermarket
 {
     public abstract class Product
     {
+        public virtual double Price { get; set; }
     }
 }
