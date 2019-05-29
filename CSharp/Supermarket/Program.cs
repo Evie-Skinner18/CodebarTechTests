@@ -37,14 +37,22 @@ price = co.total
 
             var shoppingTrolley = new List<Product>
             {
-                new Product("Fruit tea", 3.11 ),
+                new Product("Fruit tea", 3.11),
+                new Product("Fruit tea", 3.11),
                 new Product("Punnet of strawberries", 5.00),
                 new Product("Box of coffee", 11.23)
             };
 
+            // each  time you go to the checkout, you can bring a trolley full of different items
+            // and pay for them using a different combination of offers
             var checkout = new Checkout(shoppingTrolley, specialOffers);
             Console.WriteLine(checkout.CountAllItemsInTrolley());
-            Console.WriteLine(checkout);
+
+            // scan items one at a time doesn't work because of void return type...?
+            checkout.ApplySpecialOffer();
+            Console.WriteLine(checkout.GetTotal());
+
+            Console.ReadKey();
         }
     }
 }
