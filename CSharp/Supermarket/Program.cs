@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Supermarket
 
@@ -28,6 +29,22 @@ price = co.total
         static void Main(string[] args)
         {
             Console.WriteLine("Hello and welcome to the Super DUPER Market!");
+
+            var specialOffers = new List<string>
+            {
+                "TEA"
+            };
+
+            var shoppingTrolley = new List<Product>
+            {
+                new Product("Fruit tea", 3.11 ),
+                new Product("Punnet of strawberries", 5.00),
+                new Product("Box of coffee", 11.23)
+            };
+
+            var checkout = new Checkout(shoppingTrolley, specialOffers);
+            Console.WriteLine(checkout.CountAllItemsInTrolley());
+            Console.WriteLine(checkout);
         }
     }
 }
