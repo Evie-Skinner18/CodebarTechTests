@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Supermarket
 {
-    public abstract class Product
+    public class Product
     {
         public double Price;
         public string Name;

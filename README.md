@@ -12,6 +12,10 @@ My preparation for coaching at the Codebar workshop, and continuous improvement 
 * I am very pleased with the OOP nature of my code
 * I would like to improve this by adding a feature that takes in bank account data from a CSV file.
 
+## Supermarket
+* I found this harder to make than the Bank application, but not too hard.
+* I found it easy to conceptualise the key objects in the supermarket situation as objects in code
+
 
 # _JavaScript_
 ## Fizz Buzz
