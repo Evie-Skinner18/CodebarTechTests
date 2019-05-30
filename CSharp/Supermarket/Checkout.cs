@@ -57,7 +57,7 @@ namespace Supermarket
 
         public List<Product> ApplyStrawberriesSpecialOffer()
         {
-
+            var punnetsOfStrawberries = new List<Product>();
         }
     }
 }
