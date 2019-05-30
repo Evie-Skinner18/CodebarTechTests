@@ -34,32 +34,30 @@ namespace Supermarket
             return total;
         }
 
-        public List<Product> ApplySpecialOffer()
+        public List<Product> ApplyTeaSpecialOffer()
         {
-            // if tea rule has been invoked at the checkout, they get BOGOF on tea
-            if (_specialOffers.Contains("TEA") && _shoppingTrolley.Where(i => i.Name.Contains("tea")).Count() > 1)
+            var boxesOfTea = new List<Product>();
+            boxesOfTea.AddRange(_shoppingTrolley.Where(p => p.Name.Contains("tea")));
+            _shoppingTrolley.RemoveAll(p => p.Name.Contains("tea"));
+
+            var numberOfFreeBoxes = Convert.ToInt32((boxesOfTea.Count()) % 2 == 0
+                ? (boxesOfTea.Count()) / 2
+                : (boxesOfTea.Count() / 2) - 0.5);
+
+            var freeBoxes = boxesOfTea.GetRange(0, numberOfFreeBoxes);
+
+            foreach (var freeBox in freeBoxes)
             {
-                // for every two boxes of tea, they get one of those free
-                var boxesOfTea = new List<Product>();
-                boxesOfTea.AddRange(_shoppingTrolley.Where(i => i.Name.Contains("tea")));
-                _shoppingTrolley.RemoveAll(i => i.Name.Contains("tea"));
-
-                var numberOfFreeBoxes = Convert.ToInt32((boxesOfTea.Count()) % 2 == 0
-                    ? (boxesOfTea.Count()) / 2
-                    : (boxesOfTea.Count() / 2) - 0.5);
-
-               var freeBoxes = boxesOfTea.GetRange(0, numberOfFreeBoxes);
-
-                foreach (var freeBox in freeBoxes)
-                {
-                    freeBox.Price = 0.0;
-                }
-           
-                _shoppingTrolley.AddRange(boxesOfTea);
-                return _shoppingTrolley;
+                freeBox.Price = 0.0;
             }
 
+            _shoppingTrolley.AddRange(boxesOfTea);
             return _shoppingTrolley;
+        }
+
+        public List<Product> ApplyStrawberriesSpecialOffer()
+        {
+
         }
     }
 }
