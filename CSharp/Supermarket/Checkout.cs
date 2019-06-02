@@ -7,14 +7,11 @@ namespace Supermarket
     public class Checkout
     {
         private List<Product> _shoppingTrolley;
-        private Dictionary<string, object> _allItems;
+        private Dictionary<string, object> _allItems = new Dictionary<string, object>();
 
-        // multiple offer codes can be applied
-        //private List<string> _specialOffers;
 
         public Checkout(List<Product> shoppingItems)
         {
-            //_specialOffers = offerCodes;
             _shoppingTrolley = shoppingItems;
         }
     
@@ -23,7 +20,7 @@ namespace Supermarket
             return (_shoppingTrolley.Count);
         }
 
-        public string CountItemsOfEachTypeInTrolley()
+        public Dictionary<string, object> CountItemsOfEachTypeInTrolley()
         {
             var itemsGrouped = _shoppingTrolley.GroupBy(p => p.Name);
 
@@ -31,6 +28,8 @@ namespace Supermarket
             {
                 _allItems.Add($"Number of items of type {itemGroup.Key}", itemGroup.Count());
             }
+
+            return _allItems;
         }
 
         public double GetTotal()
@@ -43,6 +42,16 @@ namespace Supermarket
             }
 
             return total;
+        }
+
+        public void PickSpecialOffer(string userOfferCode)
+        {
+            if(userOfferCode.Contains("tea"))
+            {
+                ApplyTeaSpecialOffer();
+            }
+
+            ApplyStrawberriesSpecialOffer();
         }
 
         public List<Product> ApplyTeaSpecialOffer()
@@ -69,6 +78,22 @@ namespace Supermarket
         public List<Product> ApplyStrawberriesSpecialOffer()
         {
             var punnetsOfStrawberries = new List<Product>();
+            punnetsOfStrawberries.AddRange(_shoppingTrolley.Where(p => p.Name.Contains("strawberries")));
+            _shoppingTrolley.RemoveAll(p => p.Name.Contains("strawberries"));
+
+            var numberOfFreePunnets = Convert.ToInt32((punnetsOfStrawberries.Count()) % 2 == 0
+                ? (punnetsOfStrawberries.Count()) / 2
+                : (punnetsOfStrawberries.Count() / 2) - 0.5);
+
+            var freePunnets = punnetsOfStrawberries.GetRange(0, numberOfFreePunnets);
+
+            foreach (var freePunnet in freePunnets)
+            {
+                freePunnet.Price = 0.0;
+            }
+
+            _shoppingTrolley.AddRange(punnetsOfStrawberries);
+            return _shoppingTrolley;
         }
     }
 }

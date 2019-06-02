@@ -1,4 +1,5 @@
-﻿<Properties StartupConfiguration="{34473674-25D5-41AB-9DDD-C0955DF8A198}|Default">
+﻿<Properties StartupConfiguration="{7C0E5C00-369E-4AB9-8994-3F00378C443E}|Default">
+  <MonoDevelop.Ide.ItemProperties.Supermarket PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Supermarket/Checkout.cs">
     <Files>

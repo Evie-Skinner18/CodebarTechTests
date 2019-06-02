@@ -30,27 +30,40 @@ price = co.total
         {
             Console.WriteLine("Hello and welcome to the Super DUPER Market!");
 
-            var specialOffers = new List<string>
-            {
-                "TEA"
-            };
-
             var shoppingTrolley = new List<Product>
             {
                 new Product("Fruit tea", 3.11),
                 new Product("Fruit tea", 3.11),
                 new Product("Punnet of strawberries", 5.00),
+                new Product("Punnet of strawberries", 5.00),
                 new Product("Box of coffee", 11.23)
             };
 
             // each  time you go to the checkout, you can bring a trolley full of different items
-            // and pay for them using a different combination of offers
             var checkout = new Checkout(shoppingTrolley);
-            Console.WriteLine(checkout.CountAllItemsInTrolley());
+            Console.WriteLine($"You have {checkout.CountAllItemsInTrolley()} items in your trolley.");
 
-            // scan items one at a time doesn't work because of void return type...?
-            checkout.ApplySpecialOffer();
-            Console.WriteLine(checkout.GetTotal());
+            // tell them how many of each item is in the trolley and if they can have an offer
+            foreach(var itemPair in checkout.CountItemsOfEachTypeInTrolley())
+            {
+
+                Console.WriteLine(itemPair);
+
+                var message = Convert.ToInt32(itemPair.Value) > 1 ? 
+                $"You have {itemPair.Value} {itemPair.Key.Substring(23)}s. You can apply an offer for this item!" 
+                    : 
+                $"Add some more of the {itemPair.Key.Substring(23)} item to get a special offer";
+
+                Console.WriteLine(message);
+            }
+
+            Console.WriteLine("Please enter the name of the item that qualified you for an offer" );
+            var userInput = Console.ReadLine();
+
+            Console.WriteLine("Thank you. Calculating your total now...");
+            checkout.PickSpecialOffer(userInput);
+
+            Console.WriteLine($"Your total is {checkout.GetTotal()}. Enjoy your delicious food!");
 
             Console.ReadKey();
         }
