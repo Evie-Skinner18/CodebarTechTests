@@ -46,7 +46,13 @@ namespace Supermarket
 
         public void PickSpecialOffer(string userOfferCode)
         {
-            if(userOfferCode.Contains("tea"))
+            if(userOfferCode.Contains("tea") && userOfferCode.Contains("strawberries"))
+            {
+                ApplyTeaSpecialOffer();
+                ApplyStrawberriesSpecialOffer();
+            }
+
+            else if(userOfferCode.Contains("tea"))
             {
                 ApplyTeaSpecialOffer();
             }
