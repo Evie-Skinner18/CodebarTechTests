@@ -60,6 +60,7 @@ namespace Supermarket
             ApplyStrawberriesSpecialOffer();
         }
 
+        // BOGOF on tea
         public List<Product> ApplyTeaSpecialOffer()
         {
             var boxesOfTea = new List<Product>();
@@ -81,21 +82,21 @@ namespace Supermarket
             return _shoppingTrolley;
         }
 
+        // price reduction for more than 2 punnets
         public List<Product> ApplyStrawberriesSpecialOffer()
         {
             var punnetsOfStrawberries = new List<Product>();
             punnetsOfStrawberries.AddRange(_shoppingTrolley.Where(p => p.Name.Contains("strawberries")));
             _shoppingTrolley.RemoveAll(p => p.Name.Contains("strawberries"));
 
-            var numberOfFreePunnets = Convert.ToInt32((punnetsOfStrawberries.Count()) % 2 == 0
-                ? (punnetsOfStrawberries.Count()) / 2
-                : (punnetsOfStrawberries.Count() / 2) - 0.5);
+            var priceOfEachPunnet = punnetsOfStrawberries.Count() > 2 ? 4.50 : 5.00;
 
-            var freePunnets = punnetsOfStrawberries.GetRange(0, numberOfFreePunnets);
-
-            foreach (var freePunnet in freePunnets)
+            if(priceOfEachPunnet < 5.00)
             {
-                freePunnet.Price = 0.0;
+                foreach (var punnet in punnetsOfStrawberries)
+                {
+                    punnet.Price = priceOfEachPunnet;
+                }
             }
 
             _shoppingTrolley.AddRange(punnetsOfStrawberries);

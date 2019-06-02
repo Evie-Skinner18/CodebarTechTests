@@ -11,10 +11,11 @@ namespace Supermarket
 
             var shoppingTrolley = new List<Product>
             {
+                //new Product("Fruit tea", 3.11),
                 new Product("Fruit tea", 3.11),
-                new Product("Fruit tea", 3.11),
-                //new Product("Punnet of strawberries", 5.00),
-                //new Product("Punnet of strawberries", 5.00),
+                new Product("Punnet of strawberries", 5.00),
+                new Product("Punnet of strawberries", 5.00),
+                new Product("Punnet of strawberries", 5.00)
                 //new Product("Box of coffee", 11.23)
             };
 
@@ -42,7 +43,7 @@ namespace Supermarket
             Console.WriteLine("Thank you. Calculating your total now...");
             checkout.PickSpecialOffer(userInput);
 
-            Console.WriteLine($"Your total is {checkout.GetTotal()}. Enjoy your delicious {userInput}!");
+            Console.WriteLine($"Your total is £{checkout.GetTotal()}. Enjoy your delicious {userInput}!");
 
             Console.ReadKey();
         }
