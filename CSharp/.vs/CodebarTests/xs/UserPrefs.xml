@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{34473674-25D5-41AB-9DDD-C0955DF8A198}|Default">
+  <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Supermarket/Checkout.cs">
+    <Files>
+      <File FileName="Supermarket/Program.cs" Line="13" Column="28" />
+      <File FileName="Supermarket/SpecialOffer.cs" Line="1" Column="1" />
+      <File FileName="Supermarket/Checkout.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -7,19 +7,30 @@ namespace Supermarket
     public class Checkout
     {
         private List<Product> _shoppingTrolley;
+        private Dictionary<string, object> _allItems;
 
         // multiple offer codes can be applied
-        private List<string> _specialOffers;
+        //private List<string> _specialOffers;
 
-        public Checkout(List<Product> shoppingItems, List<string> offerCodes)
+        public Checkout(List<Product> shoppingItems)
         {
-            _specialOffers = offerCodes;
+            //_specialOffers = offerCodes;
             _shoppingTrolley = shoppingItems;
         }
     
         public int CountAllItemsInTrolley()
         {
             return (_shoppingTrolley.Count);
+        }
+
+        public string CountItemsOfEachTypeInTrolley()
+        {
+            var itemsGrouped = _shoppingTrolley.GroupBy(p => p.Name);
+
+            foreach (var itemGroup in itemsGrouped)
+            {
+                _allItems.Add($"Number of items of type {itemGroup.Key}", itemGroup.Count());
+            }
         }
 
         public double GetTotal()
