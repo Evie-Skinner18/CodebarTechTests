@@ -4,26 +4,27 @@ namespace CodebarTests
 
     public class FizzBuzzer
     {
-        private readonly int _numLimit;
+        private readonly int _num;
+        public string Message;
 
-        public FizzBuzzer(int numLimit)
+        public FizzBuzzer(int num)
         {
-            _numLimit = numLimit;
+            _num = num;
         }
 
 
-        public void FizzBuzz()
+        public string FizzBuzz()
         {
-            for(int i = 0; i < _numLimit; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0) Console.WriteLine("Fizz Buzz");
+            if (_num % 3 == 0 && _num % 5 == 0) Message = "Fizz Buzz";
 
-                else if (i % 3 == 0) Console.WriteLine("Fizz");
+            else if (_num % 3 == 0) Message = "Fizz";
 
-                else if (i % 5 == 0) Console.WriteLine("Buzz");
+            else if (_num % 5 == 0) Message = "Buzz";
 
-                else Console.WriteLine(i);
-            }
+            else Message = _num.ToString();
+          
+
+            return Message;
         }
     }
 }
