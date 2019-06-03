@@ -6,7 +6,6 @@ namespace CodebarTestsTests
     [TestClass]
     public class CSharpFizzBuzz
     {
-        
         [TestMethod]
         public void CanReturnFizzBuzzFor0_ShouldReturnTrue()
         {

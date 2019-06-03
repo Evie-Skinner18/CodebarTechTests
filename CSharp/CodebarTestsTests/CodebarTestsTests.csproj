@@ -13,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Bank\Bank.csproj" />
     <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj" />
+    <ProjectReference Include="..\Supermarket\Supermarket.csproj" />
   </ItemGroup>
 
 </Project>

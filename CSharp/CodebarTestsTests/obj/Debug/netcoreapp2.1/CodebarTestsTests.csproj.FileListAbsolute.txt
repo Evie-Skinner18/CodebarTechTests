@@ -15,3 +15,7 @@ C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug
 C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.csproj.CopyComplete
 C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.dll
 C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.pdb
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Bank.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Supermarket.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Bank.pdb
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Supermarket.pdb
