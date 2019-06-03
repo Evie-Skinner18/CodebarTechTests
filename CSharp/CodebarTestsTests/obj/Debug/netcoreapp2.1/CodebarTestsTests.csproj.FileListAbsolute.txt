@@ -1,0 +1,17 @@
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\CodebarTestsTests.deps.json
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\CodebarTestsTests.runtimeconfig.json
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\CodebarTestsTests.runtimeconfig.dev.json
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\CodebarTestsTests.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\CodebarTestsTests.pdb
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\FizzBuzz.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\bin\Debug\netcoreapp2.1\FizzBuzz.pdb
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.csprojAssemblyReference.cache
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.csproj.CoreCompileInputs.cache
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.AssemblyInfoInputs.cache
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.AssemblyInfo.cs
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.csproj.CopyComplete
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.dll
+C:\Users\BIO359\source\repos\CodebarTechTests\CSharp\CodebarTestsTests\obj\Debug\netcoreapp2.1\CodebarTestsTests.pdb
