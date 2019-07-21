@@ -14,7 +14,7 @@ namespace Supermarket
         {
             _shoppingTrolley = shoppingItems;
         }
-    
+
         public int CountAllItemsInTrolley()
         {
             return (_shoppingTrolley.Count);
@@ -44,20 +44,52 @@ namespace Supermarket
             return total;
         }
 
+        // this method will only be invoked if the shopper actually has a trolley able to redeem offers
+        // if they have > 1 of a product in the trolley
         public void PickSpecialOffer(string userOfferCode)
         {
-            if(userOfferCode.Contains("tea") && userOfferCode.Contains("strawberries"))
-            {
-                ApplyTeaSpecialOffer();
-                ApplyStrawberriesSpecialOffer();
-            }
+            //if(userOfferCode.Contains("tea") && userOfferCode.Contains("strawberries"))
+            //{
+            //    ApplyTeaSpecialOffer();
+            //    ApplyStrawberriesSpecialOffer();
+            //}
 
-            else if(userOfferCode.Contains("tea"))
-            {
-                ApplyTeaSpecialOffer();
-            }
+            //else if(userOfferCode.Contains("tea"))
+            //{
+            //    ApplyTeaSpecialOffer();
+            //}
 
-            ApplyStrawberriesSpecialOffer();
+            //ApplyStrawberriesSpecialOffer();
+
+            switch (userOfferCode)
+            {
+                case "tea":
+                    ApplyTeaSpecialOffer();
+                    break;
+                case "strawberries":
+                    ApplyStrawberriesSpecialOffer();
+                    break;
+                case "coffee":
+                    ApplyCoffeeSpecialOffer();
+                    break;
+                // combination offers
+                case "tea and strawberries":
+                case "strawberries and tea":
+                    ApplyTeaSpecialOffer(); ApplyStrawberriesSpecialOffer();
+                    break;
+                case "coffee and strawberries":
+                case "strawberries and coffee":
+                    ApplyCoffeeSpecialOffer(); ApplyStrawberriesSpecialOffer();
+                    break;
+                case "tea and coffee":
+                case "coffee and tea":
+                    ApplyTeaSpecialOffer(); ApplyCoffeeSpecialOffer();
+                    break;
+                // if the user has no item to redeem an offer on
+                default:
+                    Console.WriteLine("Invalid offer code!");
+                    break;
+            }
         }
 
         // BOGOF on tea
@@ -91,7 +123,7 @@ namespace Supermarket
 
             var priceOfEachPunnet = punnetsOfStrawberries.Count() > 2 ? 4.50 : 5.00;
 
-            if(priceOfEachPunnet < 5.00)
+            if (priceOfEachPunnet < 5.00)
             {
                 foreach (var punnet in punnetsOfStrawberries)
                 {
@@ -100,6 +132,28 @@ namespace Supermarket
             }
 
             _shoppingTrolley.AddRange(punnetsOfStrawberries);
+            return _shoppingTrolley;
+        }
+
+        //price reduction for more than three boxes of coffee
+        public List<Product> ApplyCoffeeSpecialOffer()
+        {
+            var boxesOfCoffee = new List<Product>();
+            boxesOfCoffee.AddRange(_shoppingTrolley.Where(p => p.Name.Contains("coffee")));
+            _shoppingTrolley.RemoveAll(p => p.Name.Contains("coffee"));
+
+            // if they have more than 3 boxes, they get each box for 8£
+            var priceOfEachBox = boxesOfCoffee.Count() > 3 ? 8.00 : 11.23;
+
+            if (priceOfEachBox < 11.23)
+            {
+                foreach (var box in boxesOfCoffee)
+                {
+                    box.Price = priceOfEachBox;
+                }
+            }
+
+            _shoppingTrolley.AddRange(boxesOfCoffee);
             return _shoppingTrolley;
         }
     }

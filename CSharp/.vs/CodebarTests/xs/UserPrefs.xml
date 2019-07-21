@@ -3,10 +3,25 @@
   <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Supermarket/Checkout.cs">
     <Files>
-      <File FileName="Supermarket/Program.cs" Line="13" Column="28" />
-      <File FileName="Supermarket/SpecialOffer.cs" Line="1" Column="1" />
+      <File FileName="Supermarket/Program.cs" Line="14" Column="14" />
       <File FileName="Supermarket/Checkout.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CodebarTests" expanded="True">
+            <Node name="Supermarket" expanded="True">
+              <Node name="Checkout.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="CodebarTests" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
