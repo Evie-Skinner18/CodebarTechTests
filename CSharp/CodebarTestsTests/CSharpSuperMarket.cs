@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Supermarket;
 
@@ -99,7 +98,27 @@ namespace CodebarTestsTests
         [TestMethod]
         public void CanApplyTeaSpecialOfferToTwoOfEachItemShoppingTrolley_ShouldReturn35_57()
         {
+            var checkout = new Checkout(_twoOfEachItemShoppingTrolley);
 
+            var discountedTrolley = checkout.ApplyTeaSpecialOffer();
+            var discountedTotal = checkout.GetTotal();
+
+            Assert.AreNotEqual(discountedTrolley, null);
+            Assert.AreEqual(discountedTrolley.Count(), 6);
+            Assert.AreEqual(discountedTotal, 35.57);
+        }
+
+        [TestMethod]
+        public void CanApplyCoffeeSpecialOfferToCoffeeTrolley_ShouldReturn32_00()
+        {
+            var checkout = new Checkout(_coffeeTrolley);
+
+            var discountedTrolley = checkout.ApplyCoffeeSpecialOffer();
+            var discountedTotal = checkout.GetTotal();
+
+            Assert.AreNotEqual(discountedTrolley, null);
+            Assert.AreEqual(discountedTrolley.Count(), 4);
+            Assert.AreEqual(discountedTotal, 32.00);
         }
     }
 }
