@@ -48,19 +48,6 @@ namespace Supermarket
         // if they have > 1 of a product in the trolley
         public void PickSpecialOffer(string userOfferCode)
         {
-            //if(userOfferCode.Contains("tea") && userOfferCode.Contains("strawberries"))
-            //{
-            //    ApplyTeaSpecialOffer();
-            //    ApplyStrawberriesSpecialOffer();
-            //}
-
-            //else if(userOfferCode.Contains("tea"))
-            //{
-            //    ApplyTeaSpecialOffer();
-            //}
-
-            //ApplyStrawberriesSpecialOffer();
-
             switch (userOfferCode)
             {
                 case "tea":
