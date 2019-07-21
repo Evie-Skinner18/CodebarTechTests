@@ -1,18 +1,20 @@
-﻿<Properties StartupConfiguration="{7C0E5C00-369E-4AB9-8994-3F00378C443E}|Default">
+﻿<Properties StartupConfiguration="{6A2456B3-3378-4787-A13F-036CBFEE7FF0}|Default">
   <MonoDevelop.Ide.ItemProperties.Supermarket PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.FizzBuzz PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Supermarket/Checkout.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodebarTestsTests/CSharpSuperMarket.cs">
     <Files>
-      <File FileName="Supermarket/Program.cs" Line="14" Column="14" />
-      <File FileName="Supermarket/Checkout.cs" Line="1" Column="1" />
+      <File FileName="Supermarket/Program.cs" Line="14" Column="48" />
+      <File FileName="Supermarket/Checkout.cs" Line="58" Column="27" />
+      <File FileName="CodebarTestsTests/CSharpSuperMarket.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CodebarTests" expanded="True">
-            <Node name="Supermarket" expanded="True">
-              <Node name="Checkout.cs" selected="True" />
+            <Node name="CodebarTestsTests" expanded="True">
+              <Node name="CSharpSuperMarket.cs" selected="True" />
             </Node>
+            <Node name="Supermarket" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -24,6 +26,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CodebarTestsTests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

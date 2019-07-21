@@ -36,6 +36,14 @@ namespace CodebarTestsTests
             new Product("Punnet of strawberries", 5.00)
         };
 
+        private List<Product> _coffeeTrolley = new List<Product>
+        {
+            new Product("Box of coffee", 11.23),
+            new Product("Box of coffee", 11.23),
+            new Product("Box of coffee", 11.23),
+            new Product("Box of coffee", 11.23)
+        };
+
         [TestMethod]
         public void CanCountAllItemsInTrolley_ShouldReturnThree_Five_Six()
         {
