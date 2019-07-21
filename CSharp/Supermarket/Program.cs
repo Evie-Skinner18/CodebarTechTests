@@ -11,7 +11,7 @@ namespace Supermarket
 
             var shoppingTrolley = new List<Product>
             {
-                //new Product("Fruit tea", 3.11),
+                new Product("Fruit tea", 3.11),
                 new Product("Fruit tea", 3.11),
                 new Product("Punnet of strawberries", 5.00),
                 new Product("Punnet of strawberries", 5.00),
