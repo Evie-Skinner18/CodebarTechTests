@@ -10,6 +10,7 @@ namespace CodebarTestsTests
     [TestClass]
     public class CSharpSuperMarket
     {
+        // not eligible
         private List<Product> _oneOfEachItemShoppingTrolley = new List<Product>
         {
             new Product("Fruit tea", 3.11),
@@ -17,6 +18,7 @@ namespace CodebarTestsTests
             new Product("Punnet of strawberries", 5.00)
         };
 
+        // eligible for strawberries offer
         private List<Product> _strawbsTrolley = new List<Product>
         {
             new Product("Punnet of strawberries", 5.00),
@@ -26,6 +28,7 @@ namespace CodebarTestsTests
             new Product("Punnet of strawberries", 5.00)
         };
 
+        // eligible for tea offer
         private List<Product> _twoOfEachItemShoppingTrolley = new List<Product>
         {
             new Product("Fruit tea", 3.11),
@@ -36,6 +39,7 @@ namespace CodebarTestsTests
             new Product("Punnet of strawberries", 5.00)
         };
 
+        // eligible for coffee offer
         private List<Product> _coffeeTrolley = new List<Product>
         {
             new Product("Box of coffee", 11.23),
@@ -89,7 +93,13 @@ namespace CodebarTestsTests
             //assert
             Assert.AreNotEqual(discountedTrolley, null);
             Assert.AreEqual(discountedTrolley.Count(), 5);
-            Assert.AreEqual(discountedTotal, 25.00);
+            Assert.AreEqual(discountedTotal, 22.50);
+        }
+
+        [TestMethod]
+        public void CanApplyTeaSpecialOfferToTwoOfEachItemShoppingTrolley_ShouldReturn35_57()
+        {
+
         }
     }
 }
