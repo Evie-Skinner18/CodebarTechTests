@@ -8,13 +8,18 @@ namespace CodebarTests
         {
 
 
-            Console.WriteLine("Welcome to the Fizz Buzzer! Please enter a number to be the limit: ");
-            var numLimit = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Welcome to the Fizz Buzzer! Please enter a number and I will give you its " +
+                              "message. Type exit to leave.");
+            var userNum = Console.ReadLine();
 
-            var fizzBuzzer = new FizzBuzzer(numLimit);
-            fizzBuzzer.FizzBuzz();
+            while (userNum != "exit")
+            {
+                var fizzBuzzer = new FizzBuzzer(Int32.Parse(userNum));
+                Console.WriteLine(fizzBuzzer.FizzBuzz());
+                userNum = Console.ReadLine();
+            }
 
-            Console.ReadKey();
+            Console.WriteLine("Ciao!");
         }
     }
 }

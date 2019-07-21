@@ -12,6 +12,12 @@ My preparation for coaching at the Codebar workshop, and continuous improvement 
 * I am very pleased with the OOP nature of my code
 * I would like to improve this by adding a feature that takes in bank account data from a CSV file.
 
+## Supermarket
+* I found this harder to make than the Bank application, but not too hard.
+* I found it easy to conceptualise the key objects in the supermarket situation as objects in code
+* I enjoyed making this more than the other solutions, because I liked the modular way this situation works in real life (and therfore how it can easily be expressed in OO code). One can approach the checkout with a trolley of different items and apply different offers each time, because there is a separate object for Product and a separate method for each special offer.
+* I think it would be better if I had a Scan() method, so it's possible to scan each item one at a time: currently, the hwole shopping trolley goes in as an argument when a checkout object is instantiated.
+
 
 # _JavaScript_
 ## Fizz Buzz
