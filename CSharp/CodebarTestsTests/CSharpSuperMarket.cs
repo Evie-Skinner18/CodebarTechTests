@@ -45,15 +45,17 @@ namespace CodebarTestsTests
         };
 
         [TestMethod]
-        public void CanCountAllItemsInTrolley_ShouldReturnThree_Five_Six()
+        public void CanCountAllItemsInTrolley_ShouldReturnThree_Five_Six_Four()
         {
             var checkout1 = new Checkout(_oneOfEachItemShoppingTrolley);
             var checkout2 = new Checkout(_strawbsTrolley);
             var checkout3 = new Checkout(_twoOfEachItemShoppingTrolley);
+            var checkout4 = new Checkout(_coffeeTrolley);
 
             Assert.AreEqual(checkout1.CountAllItemsInTrolley(), 3);
             Assert.AreEqual(checkout2.CountAllItemsInTrolley(), 5);
             Assert.AreEqual(checkout3.CountAllItemsInTrolley(), 6);
+            Assert.AreEqual(checkout4.CountAllItemsInTrolley(), 4);
         }
 
         [TestMethod]
@@ -72,6 +74,22 @@ namespace CodebarTestsTests
             Assert.AreEqual(allItemsInTrolley[1].Value, 1);
             Assert.AreEqual(allItemsInTrolley[2].Key, "Number of items of type Punnet of strawberries");
             Assert.AreEqual(allItemsInTrolley[2].Value, 1);
+        }
+
+        [TestMethod]
+        public void CanApplyStrawberriesSpecialOfferToStrawbsTrolley_ShouldReturn22_50()
+        {
+            // arrange
+            var checkout = new Checkout(_strawbsTrolley);
+
+            //act
+            var discountedTrolley = checkout.ApplyStrawberriesSpecialOffer();
+            var discountedTotal = checkout.GetTotal();
+
+            //assert
+            Assert.AreNotEqual(discountedTrolley, null);
+            Assert.AreEqual(discountedTrolley.Count(), 5);
+            Assert.AreEqual(discountedTotal, 25.00);
         }
     }
 }
